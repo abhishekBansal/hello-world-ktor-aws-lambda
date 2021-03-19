@@ -20,9 +20,12 @@ buildscript {
         classpath("io.kotless:gradle:0.1.7-beta-5")
     }
 }
+
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         jvmTarget = "1.8"
+        languageVersion = "1.4"
+        apiVersion = "1.4"
     }
 }
 
