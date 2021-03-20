@@ -17,3 +17,7 @@ fun Application.module(testing: Boolean = false) { // gzip, deflate
         }
     }
 }
+
+class Server: Kotless() {
+
+}
