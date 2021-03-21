@@ -1,11 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import io.kotless.plugin.gradle.dsl.kotless
-
-//import io.kotless.resource.Lambda.Config.*
+import io.kotless.resource.Lambda.Config.*
 
 plugins {
     kotlin("jvm") version "1.4.21" apply true
-//    id ("tanvd.kosogor") version "1.0.10"
+    id("tanvd.kosogor") version "1.0.10"
     id("io.kotless") version "0.1.7-beta-5" apply true
 }
 
@@ -26,20 +25,34 @@ repositories {
 group = "dev.abhishekbansal"
 version = "1.0"
 
-
 dependencies {
 //    implementation(kotlin("stdlib"))
     implementation("io.kotless", "ktor-lang", "0.1.7-beta-5")
 }
 
+sourceSets.getByName("main") {
+    java.srcDir("src")
+}
+
 //kotless {
-//    config {
-//        bucket = "eu.ktor-site.s3.ktls.aws.intellij.net"
-//        prefix = "ktor-site"
+////    config {
+////        bucket = "eu.ktor-site.s3.ktls.aws.intellij.net"
+////        prefix = "ktor-site"
+////
+////        terraform {
+////            profile = "kotless-jetbrains"
+////            region = "eu-west-1"
+////        }
+////    }
+//    extensions {
+//        local {
+//            useAWSEmulation = true
+//        }
 //
 //        terraform {
-//            profile = "kotless-jetbrains"
-//            region = "eu-west-1"
+//            files {
+//                add(file("src/main/tf/extensions.tf"))
+//            }
 //        }
 //    }
 //}
