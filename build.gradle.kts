@@ -34,16 +34,16 @@ sourceSets.getByName("main") {
     java.srcDir("src")
 }
 
-//kotless {
-////    config {
-////        bucket = "eu.ktor-site.s3.ktls.aws.intellij.net"
-////        prefix = "ktor-site"
-////
-////        terraform {
-////            profile = "kotless-jetbrains"
-////            region = "eu-west-1"
-////        }
-////    }
+kotless {
+    config {
+        bucket = "hello-world-ktor-s3-bucket"
+        prefix = "hello-ktor"
+
+        terraform {
+            profile = "default"
+            region = "eu-central-1"
+        }
+    }
 //    extensions {
 //        local {
 //            useAWSEmulation = true
@@ -55,4 +55,4 @@ sourceSets.getByName("main") {
 //            }
 //        }
 //    }
-//}
+}
