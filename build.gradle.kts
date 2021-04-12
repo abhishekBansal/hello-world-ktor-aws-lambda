@@ -44,6 +44,12 @@ kotless {
             region = "eu-central-1"
         }
     }
+
+    webapp {
+        lambda {
+            memoryMb = 256
+        }
+    }
 //    extensions {
 //        local {
 //            useAWSEmulation = true
